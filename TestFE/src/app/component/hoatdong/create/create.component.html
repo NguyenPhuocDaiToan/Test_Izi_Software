@@ -1,0 +1,97 @@
+<div class="container">
+  <div class="p-5">
+    <h1 class="text-danger text-center d-block text-decoration-none fw-bold fs-1">
+      Thêm mới hoạt động
+    </h1>
+    <form [formGroup]="formCreate" (ngSubmit)="create()" #f="ngForm">
+      <div class="form-group row mb-2">
+        <span class="form-label col-2 fw-bold">Mã hoạt động:</span>
+        <div class="col-10">
+          <input type="text" class="form-control" formControlName="maHD">
+        </div>
+      </div>
+
+      <div class="form-group row mb-2">
+        <span class="col-2"></span>
+        <div class="col-10">
+          <p *ngIf="maHD.invalid && (maHD.touched || f.submitted)" class="text-danger">Mã hợp đồng không được để trống</p>
+        </div>
+      </div>
+
+      <div class="form-group row mb-2">
+        <span class="form-label col-2 fw-bold">Tên hoạt động:</span>
+        <div class="col-10">
+          <input type="text" class="form-control" formControlName="tenHD">
+        </div>
+      </div>
+
+      <div class="form-group row mb-2">
+        <span class="col-2"></span>
+        <div class="col-10">
+          <p *ngIf="tenHD.invalid && (tenHD.touched || f.submitted)" class="text-danger">Tên hợp đồng không được để trống</p>
+        </div>
+      </div>
+
+      <div class="form-group row mb-2">
+        <span class="form-label col-2 fw-bold">Mô tả:</span>
+        <div class="col-10">
+          <input type="text" class="form-control" formControlName="moTaHD">
+        </div>
+      </div>
+
+      <div class="form-group row mb-2">
+        <span class="col-2"></span>
+        <div class="col-10">
+          <p *ngIf="moTaHD.invalid && (moTaHD.touched || f.submitted)" class="text-danger">Mô tả không được để trống</p>
+        </div>
+      </div>
+
+      <div class="form-group row mb-2">
+        <span class="form-label col-2 fw-bold">Ngày bắt đầu:</span>
+        <div class="col-10">
+          <input type="date" class="form-control" formControlName="ngayGioBatDau">
+        </div>
+      </div>
+
+      <div class="form-group row mb-2">
+        <span class="form-label col-2 fw-bold">Ngày kết thúc:</span>
+        <div class="col-10">
+          <input type="date" class="form-control" formControlName="ngayGioKetThuc">
+        </div>
+      </div>
+
+      <div class="form-group row mb-2">
+        <span class="form-label col-2 fw-bold">Thời hạn đăng ký:</span>
+        <div class="col-10">
+          <input type="date" class="form-control" formControlName="thoiHanDangKy">
+        </div>
+      </div>
+
+      <div class="form-group row mb-2">
+        <span class="form-label col-2 fw-bold">Số lượng tối thiểu:</span>
+        <div class="col-10">
+          <input type="text" class="form-control" formControlName="sltoiThieuYC">
+        </div>
+      </div>
+
+      <div class="form-group row mb-2">
+        <span class="form-label col-2 fw-bold">Số lượng tối đa:</span>
+        <div class="col-10">
+          <input type="text" class="form-control" formControlName="sltoiDaYC">
+        </div>
+      </div>
+
+      <div class="form-group row mb-2">
+        <span class="form-label col-2 fw-bold">Mã Thành Viên:</span>
+        <div class="col-10">
+          <input type="text" class="form-control" formControlName="maTV">
+        </div>
+      </div>
+
+      <div class="d-flex align-items-end justify-content-end mt-4">
+        <button class="btn btn-warning" routerLink="/">Huỷ</button>
+        <button type="submit" class="btn btn-success mx-4">Thêm mới</button>
+      </div>
+    </form>
+  </div>
+</div>

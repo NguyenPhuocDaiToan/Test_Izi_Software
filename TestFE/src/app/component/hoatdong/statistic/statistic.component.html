@@ -1,0 +1,22 @@
+<div class="container">
+  <h1 class="text-center m-5">Thống kê</h1>
+  <div>
+    <button class="btn btn-success m-2" routerLink="/">Quay lại trang chủ</button>
+  </div>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">Mã trưởng đoàn</th>
+      <th scope="col">Họ tên trưởng đoàn</th>
+      <th scope="col">Điểm trung bình</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let s of statistics">
+      <td>{{s?.maTV}}</td>
+      <td>{{s?.hoTen}}</td>
+      <td>{{s?.diemTrungBinh}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
